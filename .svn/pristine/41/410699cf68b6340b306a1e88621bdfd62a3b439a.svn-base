@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta http-equiv="pragma" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="cache-Control" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="expires" content="0"><!--禁止缓存-->
+    <title>民生银行</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header><img src="images/minShengBank_03.jpg"></header>
+<article><img src="images/minShengBank_06.jpg"></article>
+<aside><img src="images/minShengBank_08.jpg"></aside>
+<br style="clear: both">
+<footer><code>更多内容</code>400-969-8088</footer>
+<script src="js/lib/cmbcForClient.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://m.xuechebu.com/baoming/js/zepto.min.js"></script>
+<script data-main="js/app/index.js" src="js/require.js"></script>
+</body>
+</html>

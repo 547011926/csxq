@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html  style="height: 100%">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta http-equiv="pragma" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="cache-Control" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="expires" content="0"><!--禁止缓存-->
+    <title>选驾校</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--	描述：同app交互禁止改为模块化 -->
+    <script src="js/zepto.min.js"></script>
+    <script src="pub/iapp.js"></script>
+    <!--end-->
+    
+    <script src="../js/lib/cmbcForClient.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script data-main="js/app/index" src="js/require.js"></script>
+</head>
+<body id="tbody"  style="height: 100%">
+    <div class="index-lists" id="jxlist"></div>
+    <div id="tjIcon">
+       <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1255443433'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255443433%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>    
+    </div>
+    
+    
+    <form name="test2" action="" method="post">
+		<input type="hidden" id="orderInfo" name="orderInfo" value="AfAEAACAAN8MxYbjxgTPoJc2ABko2iOdRy2fRPUIVO/a688KDNxRB2S1sPasFidZR/N7BBtd9+Mmf45JgduFOPVfJwd1HRNPlj38ZS9PkfV4pCZdew5bqJGSXk5UeZbmhaLk1PZfIQg18rHYs+kV6GaFOIKJimFJvGlXj4R6jvv5U3vUiLaWSKdDZDRJ76B4ydsJsavEjyebAAvBK4C5a4Y2q+eRVdZ5QyqN3sDL1CzgGsh9zN5g46bCe5nXI9XM2DxFPlv2gef8JxYla8aQBf6tWdljYawhCAihGraapsW/efG+mIJEwXNzxu8d/eYdBGqjH93JxGMNYvt1jzpo8f71ynvmAR33NjzxAqgD3WeiTH2p8Yd/ldJacwuSqH/D3luJeOjE1L+hrY/W0IciweMU2vQoBsY5uhGJ0HIURy0BU+L7CnKGwfNph26o2lhb1NotS5p2IzEnvXlw2Op6+UFGPsGqgXVc7i0AuC6H13GlRXR1w12X+AWXZLMm0f1B0noXJNz8QzLcvzd5ML6bvZi9629saY/bOgsbKDuYuqXXyNmXJLfJ5mWrc3u0AabCvAfX/UDnK2IqIwOZaSIRKbVxxoZltZWTHmJxQC2HMQEbYL4z4ZQNijMCfbpOlPJyRkBSZHpvIrpbmc6tX7fTnQEPs4+OfOyODfuh9bcGyMjUUvZicYCAmYYNmoqn51r5Zmhz7NRaVo+OOyrdw5XDQnFiAk4SMSC1Qzz3ebZeUqWJVd1PtE4hL/2T+HbGqEd0aeKFjxaglv6TM3jDJ7oGafGEOsm9+pl5V6CkU0kgDIr+TB/hYGE8w8IUleqBKxv3SI5eLBCn5tcA6U4C4D5BqJGFIteMUtEsh1oo461jOjDsXTI6vdfu9fBuSdhfyLKVCA19jNcdJ05a1fHSL3w271VvS0Nd+jJygEO/NY70KK6lQfokdjVhvrQBGaHkHDbFadH05Onz006iEg8MvhAQY8dZDCwQ/PzudwcKgF8gAzAnFN54ZJD8WNVI51FV9XPj/kUXfFG1isUayLy9QkGbcKyBANsyGuV+0PMGjHuxEyGGOjOuAHjpdHplL7uw5u18GxsbgPhmB9R+MPP0wFhqf6sK9kBMuYjM0M9scvwrdfmpyqwpHHBCoFcT11tf+weyMHyrMeWzdGQ6aESHUVZ37qW6gpF2TFuquG9i3WQL1bvqEByXJwEbzWq1v+ZHpyDQMa+zC9LROKHoiaV9J4eEf2nsi+gv2X9h9RqJAZ5nNiVd2lBriISoSiKoZPaWSNvnhRdvmvc9hvlF9y+4vA2rfEEhuKtD3RXQ3G66xcS6meAG3kaT6siIGAR86eBKQbimPlTo9pVW9/rxJ3p/dfOzzq9QcJw+wEWoChGb6j7INHzvd02e/wRmuiuDx5pgeNkmkWSh0u59F+xl5QEzHWDlnEsNTVsoh4Rixt9C+nwVaVMpCxRcoedwfI46jBaQMih8AOeK6NoD18UH3sryRh7SCu3Sy/VTa4EXAMe9VS10sc+5hWKHYlx7U8uRoRycJrBDSgLHjB364tcusSLiK7eCq2P8iP9hKcqGFGsAeSs/rOPmhxg7DPLQP0Rqdy923wAiv3VsdFBAfdmb4xhD4RUzT0tYi+jt8i5rm4QhyRC94yXeXYFUvRLezNMecYvuzz06DYwI7BHZEaGWncIRud2V1wPxos+uXn+j4bqofwtibK8v4+hyq8aLLKSkLdvS+XlEmRZah4E/009da7z4wNyORaMgvdE3ZLEdPbyAv2wIg0OFDp0tDATsBFkJxCi1mvowkx4xmcs2VS2Uo8WT15bFu9oBJ0TIYjk9gyonZXsWImTAn/TfIEihdaZOYXaHipSILkDrEuxwYA=="/>
+		<input type="hidden" id="orderInfoPlain" name="orderInfoPlain" value=""/>
+		<input type="button" id="btnzz" value="支付-外网" onclick=""/>
+	</from>
+    
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html  manifest="manifest/index.appcache">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait">
+    <!--禁止横屏-->
+    <meta name="x5-orientation" content="portrait">
+    <!--禁止横屏QQ浏览器-->
+    <meta http-equiv="pragma" content="no-cache">
+    <!--禁止缓存-->
+    <meta http-equiv="cache-Control" content="no-cache">
+    <!--禁止缓存-->
+    <meta http-equiv="expires" content="0">
+    <!--禁止缓存-->
+    <title>驾考题库</title>
+    <!--<script src="http://192.168.1.112:8009/target/target-script-min.js#anonymous"></script>-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 182.5px;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: 100% 100%;
+        }
+    </style>
+
+</head>
+<body>
+<!-- Swiper -->
+<!--<div class="swiper-container">
+    <div class="swiper-wrapper" style="width: 100%"></div>-->
+    <!-- Add Pagination -->
+    <!--<div class="swiper-pagination" style="width: 100%"></div>
+</div>-->
+<!--轮播图-->
+<div class="examination">
+    <div class="one">
+        <ul>
+            <li id="one-time"><span></span></li>
+            <li id="one-number"><span></span></li>
+            <li id="one-error"><span>已错0题</span></li>
+            <li id="one-submit"><span>交卷</span></li>
+        </ul>
+    </div>
+    <div class="two">
+    </div>
+</div>
+<!--	描述：同app交互禁止改为模块化 -->
+<script src="http://m.xuechebu.com/baoming/js/zepto.min.js"></script>
+<!--<script src="http://jptest5.xuechebu.com/m/pub/iapp.js"></script>-->
+<script src="http://jptest5.xuechebu.com/m/pub/iapp.js"></script>
+
+<!--<script src="http://m.xuechebu.com/lib/user.js"></script>-->
+<!--end-->
+<script src="js/require.js" data-main="js/app/kaoshi"></script>
+<!--<script src="js/require.js" data-main="js/app/url"></script>-->
+<!--<script src="js/require.js" data-main="js/app/json"></script>-->
+
+<script>
+
+    /*window.applicationCache.addEventListener('updateready', function (e) {
+        if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+            if (confirm("有新的内容 是否更新？")) {
+                window.location.reload();
+                window.applicationCache.swapCache();
+            }
+        }
+    }, false)*/
+
+
+    /*
+     code1一般用在页面加载时直接触发，而code2的方式可后期检查更新。
+    applicationCache.onupdateready = function () {
+        applicationCache.swapCache();
+        location.reload();
+    };*/
+    /*code2，缓存公用方法*/
+    var EventUtil = {
+        addHandler: function (element, type, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = handler;
+            }
+        }
+    };
+    EventUtil.addHandler(applicationCache, "updateready", function () {      /*缓存更新并已下载，要在下次进入页面生效 */
+        applicationCache.update();
+        /*检查缓存manifest文件是否更新，ps:页面加载默认检查一次。*/
+        applicationCache.swapCache();
+        /*交换到新的缓存项中，交换了要下次进入页面才生效     */
+        location.reload();
+        /*重新载入页面*/
+    });
+</script>
+
+
+</body>
+</html>

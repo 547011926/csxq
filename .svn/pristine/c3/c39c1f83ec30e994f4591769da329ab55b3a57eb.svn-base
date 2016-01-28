@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="screen-orientation" content="portrait">
+		<!--禁止横屏-->
+		<meta name="x5-orientation" content="portrait">
+		<!--禁止横屏QQ浏览器-->
+		<meta http-equiv="pragma" content="no-cache">
+		<!--禁止缓存-->
+		<meta http-equiv="cache-Control" content="no-cache">
+		<!--禁止缓存-->
+		<meta http-equiv="expires" content="0">
+		<!--禁止缓存-->
+		<link rel="stylesheet" href="css/style.css" />
+		<title>活动页</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="huodong">
+			<div class="banner"><img src="images/huodong_03.jpg"></div>
+			<div class="nav"><img src="images/huodong_07.jpg"></div>
+			<div class="content">
+				<div class="tit"></div>
+				<h1>活动说明</h1>
+				<h3>如何参与</h3>
+				<p>
+					邀请新用户成功支付报名费、并顺利开始科目一学习，“学车不”客服在7个工作日内通过微信服务号——“学车不pro”发放奖励。
+				</p>
+				<p>
+					享奖励，任选50元现金或者学车礼包（价值50元时尚帆布袋和纯棉长毛巾）
+				</p>
+				<p>
+					推荐人，关注微信“学车不pro”，发送被推荐人姓名+手机号和自己的手机号，即可参与活动，享奖励。
+				</p>
+				<p>
+					被推荐人，在报名支付中，“备注栏”中填写推荐人手机号，即可参与活动，享奖励。
+				</p>
+				<p>
+					开通驾校，北京盛华驾校、北京龙泉机动车驾驶员培训中心、北方汽车驾驶学校。
+				</p>
+				<div class="huodongtit"><strong>活动时间</strong></div>
+				<span>2015年10月27日-2016年1月31日</span>
+				<span>其他问题，请联系学车不客服：<a href="tel:400-969-8088">400-969-8088</a></span>
+				<span>非正常途径获得的优惠码奖励无效，“学车不”保留最终解释权。</span>
+			</div>
+			<!--<div class="huodong-fixed">
+            <a href="javascript:;" id="kj">QQ空间</a>
+            <a href="javascript:;" id="py">发送给朋友</a>
+            <a href="javascript:;" id="qqhy">QQ好友</a>
+            <a href="javascript:;" id="pyq">微信朋友圈</a>
+        </div>-->
+		</div>
+
+		<!--	描述：同app交互禁止改为模块化 -->
+		<script src="js/zepto.min.js"></script>
+		<script src="pub/iapp.js"></script>
+		<!--end-->
+
+		<script src="js/zepto.min.js" type="application/javascript"></script>
+		<!--<script>
+    (function(){
+        var p = {
+            url:location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
+            desc:'11', /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
+            title:'22', /*分享标题(可选)*/
+            summary:'33', /*分享摘要(可选)*/
+            pics:'44', /*分享图片(可选)*/
+            flash: '55', /*视频地址(可选)*/
+            site:'66', /*分享来源(可选) 如：QQ分享*/
+            style:'201',
+            width:32,
+            height:32
+        };
+        var s = [];
+        for(var i in p){
+            s.push(i + '=' + encodeURIComponent(p[i]||''));
+        }
+        document.write(['<a class="qcShareQQDiv" href="http://connect.qq.com/widget/shareqq/index.html?',s.join('&'),'" target="_blank">分享到QQ</a>'].join(''));
+    })();
+</script>
+<script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script>-->
+		<!--<script>
+$(function(){
+    var _title,_source,_sourceUrl,_pic,_showcount,_desc,_summary,_site,
+            _width = 600,
+            _height = 600,
+            _top = (screen.height-_height)/2,
+            _left = (screen.width-_width)/2,
+            _url = 'http://tm.xuechebu.com/tuijianbaoming.html',
+            _desc = "学车不报名真可靠，快来报名吧~",
+            _summary ="速取50元「学车不？」现金或学车礼。在线学车、约车约考，就在学车不！",
+            _title = "学车不推荐报名优惠活动",
+            _pic = 'http://jptest5.xuechebu.com/m/images/huodong_03.jpg';
+    $('#kj').click(function (e) {
+        var _shareUrl = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?';
+        _shareUrl += 'url=' + encodeURIComponent(_url||document.location);   //参数url设置分享的内容链接|默认当前页location
+         //_shareUrl += '&showcount=' + 0;      //参数showcount是否显示分享总数,显示：'1'，不显示：'0'，默认不显示
+        _shareUrl += '&desc=' + encodeURIComponent(_desc||'分享的描述');    //参数desc设置分享的描述，可选参数
+        _shareUrl += '&summary=' + encodeURIComponent(_summary||'分享摘要');    //参数summary设置分享摘要，可选参数
+        _shareUrl += '&title=' + encodeURIComponent(_title||document.title);    //参数title设置分享标题，可选参数
+        //_shareUrl += '&site=' + encodeURIComponent(_site||'');   //参数site设置分享来源，可选参数
+        _shareUrl += '&pics=' + encodeURIComponent(_pic||'');   //参数pics设置分享图片的路径，多张图片以＂|＂隔开，可选参数
+        window.open(_shareUrl,'_blank','width='+_width+',height='+_height+',top='+_top+',left='+_left+',toolbar=no,menubar=no,scrollbars=no,resizable=1,location=no,status=0');    });
+    $("#qqhy").click(function () {
+        var timelineLink ="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7c5e6aef953f4268&redirect_uri=http://www.xuechebu.com&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+                    //分享朋友圈连接地址
+        var sendFriendLink = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7c5e6aef953f4268&redirect_uri=http://www.xuechebu.com&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+                    //这儿是全局变量
+                    window.shareData = {
+                            "imgUrl": "http://api.olavoice.com/olaweb/activities/resource/activity-lottery-1.png",
+                                 "timeLineLink": timelineLink,
+                                 "sendFriendLink": sendFriendLink,
+                                 "weiboLink": "http://10.3.172.189/olaweb/wx/bless/homepage",
+                                 "tTitle": "我在活动，你也一起来参加",
+                                 "tContent": "我在活动，你也一起来参加！",
+                                 "fTitle": "我在活动，你也一起来参加",
+                                 "fContent": "我在活动，你也一起来参加！",
+                                 "wContent": "我在活动，你也一起来参加！"
+                    };
+    })
+});
+</script>
+
+    <div class="bdsharebuttonbox" data-tag="share_1">
+        <a class="bds_mshare" data-cmd="mshare"></a>
+        <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+        <a class="bds_tsina" data-cmd="tsina"></a>
+        <a class="bds_baidu" data-cmd="baidu"></a>
+        <a class="bds_renren" data-cmd="renren"></a>
+        <a class="bds_tqq" data-cmd="tqq"></a>
+        <a class="bds_more" data-cmd="more">更多</a>
+        <a class="bds_count" data-cmd="count"></a>
+    </div>
+    <script>
+        window._bd_share_config = {
+            common : {
+                bdText : '自定义分享内容',
+                bdDesc : '自定义分享摘要',
+                bdUrl : '自定义分享url地址',
+                bdPic : '自定义分享图片'
+            },
+            share : [{
+                "bdSize" : 16
+            }],
+            slide : [{
+                bdImg : 0,
+                bdPos : "right",
+                bdTop : 100
+            }],
+            image : [{
+                viewType : 'list',
+                viewPos : 'top',
+                viewColor : 'black',
+                viewSize : '16',
+                viewList : ['qzone','tsina','huaban','tqq','renren']
+            }],
+            selectShare : [{
+                "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+            }]
+        }
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+    </script>-->
+	</body>
+
+</html>

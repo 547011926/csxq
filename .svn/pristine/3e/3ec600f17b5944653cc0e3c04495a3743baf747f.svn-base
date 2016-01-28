@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+		<title>学车不-找驾校</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jiaxiao.css"/>
+		
+	</head>
+	<body>
+		<!--detail-->
+		<div class="wrap mt15 box">
+			<div class="drivingPic"><img id="img_jxpic" src="" alt="驾校图片" /></div>
+			<div class="drivingDetail">
+				<!--<h2 id="a_jxmc" class="detailTit"></h2>-->
+				<ul class="detailTit">
+					<li><a href="javascript:;" id="a_jxmc">海淀驾校</a></li>
+					<li><a href="javascript:;" id="li_yhjg"></a></li>
+				</ul>
+				<div class="detailCon">
+					<div id="div_jxdz" class="address"></div>
+					<!--<div class="leftCon">
+						<ul class="star">
+							<li class="on"><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+						</ul>
+						<div id="div_jxdz" class="address"></div>
+					</div>
+					<div class="rightCon">
+						<ul class="price">
+							<li id="li_yhjg"></li>
+							<li>5km</li>
+						</ul>
+					</div>-->
+				</div>
+				<div id="div_mtsfw" class="images">
+					<!--<img src="images/icon_02.png">
+					<img src="images/icon_04.png">
+					<img src="images/icon_06.png">
+					<img src="images/icon_08.png">
+					<img src="images/icon_10.png">
+					<img src="images/icon_12.png">
+					<img src="images/icon_14.png">
+					<img src="images/icon_16.png">-->
+				</div>
+			</div>
+		</div>
+		
+		<!--icon list-->
+		<div class="wrap mt15 swiperBox">
+			<span class="arr_up"></span>
+			<div class="swiper-container">
+				<div id="div_tsfw" class="swiper-wrapper">
+					<!--<div class="swiper-slide"><img src="images/xbfl_01.png" alt="" /></div>
+					<div class="swiper-slide"><img src="images/xbfl_02.png" alt="" /></div>
+					<div class="swiper-slide"><img src="images/xbfl_03.png" alt="" /></div>
+					<div class="swiper-slide"><img src="images/xbfl_04.png" alt="" /></div>
+					<div class="swiper-slide"><img src="images/xbfl_05.png" alt="" /></div>
+					<div class="swiper-slide"><img src="images/xbfl_06.png" alt="" /></div>
+					<div class="swiper-slide"><img src="images/xbfl_07.png" alt="" /></div>
+					<div class="swiper-slide"><img src="images/xbfl_08.png" alt="" /></div>-->
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+		
+		<!--Recommend-->
+		<div class="wrap mt15">
+			<a id="a_jxjj" href="jiaxiaoInfo.html" class="intro"></a>
+			<a id="a_jxdz" href="javascript:;" class="addLink"></a>
+			<ul class="box enlist">
+				<li>报名</li>
+				<li id="li_bmrs"></li>
+			</ul>
+			<ul class="btnBox box">
+				<li><a href="yuyue.html" class="orderBtn">预约报名</a></li>
+				<li><a href="http://m.xuechebu.com/baoming/tuijianbaoming.html" class="recommendBtn">推荐报名</a></li>
+			</ul>
+			<a id="a_bcxl" href="banchexianlu.html" class="route">
+				<p>班车线路</p>
+				<p id="p_xlts"></p>
+			</a>
+			<a id="a_jxbx" href="javascript:;" class="drivingType">
+				<!--<h2>班型</h2>
+				<div class="typePic"><img src="images/bx_byd.jpg" alt="班型图片" /></div>
+				<p>
+					<span>金牌驾校预约计时班</span><br />
+					<span>训练时间：</span>全周7:00-17:00<br />
+					<span>训练车型：</span>宝来手动档<br />
+					<span>驾照类型：</span>B1<br />
+				</p>-->
+			</a>
+		</div>
+		
+		<!--scale index-->
+		<div class="wrap mt15 scaleIndex">
+			<h2 class="scaleTit">规模指数</h2>
+			<!--<div id="ul_top">-->
+			<div class="two">
+				<p>
+					<b>成立时间：</b><span>1984年</span>
+				</p>
+				<p>
+					<b>班次种类：</b><span>齐全</span>
+				</p>
+			</div>
+			<div class="two">
+				<p><b>考试场地：</b><span>本校</span></p>
+			</div>
+			<!--<ul id="ul_down">-->
+			<div class="two">
+				<p><b>办学宗旨：</b><span>坚持五个一、服务好每位学员</span></p>
+			</div>
+			<div id="jiaolian" class="index mt15"></div>
+			<div id="xunlianche" class="index mt15"></div>
+			<div id="mianji" class="index mt15"></div>
+		</div>
+		
+		<!--xiaobu index-->
+		<div class="wrap mt15 xbIndex">
+			<h2 class="scaleTit">小不指数</h2>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span name="span_jxmc"></span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">价格<br />指数</div>
+					<div id="jgzs" class="iMap"></div>
+					<div class="iText">指数说明：近12个月驾校“在训学员数”与去年同期驾校“在训学员数”环比变动趋势。
+波动因素：学员指数的波动变化受到驾校规模变更、学车淡旺季等因素影响。</div>
+				</div>
+			</div>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span name="span_jxmc"></span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">学员<br />指数</div>
+					<div id="zszszs" class="iMap"></div>
+					<div class="iText">指数说明：近12个月驾校“在训学员数”与去年同期驾校“在训学员数”环比变动趋势。
+波动因素：学员指数的波动变化受到驾校规模变更、学车淡旺季等因素影响。</div>
+				</div>
+			</div>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span name="span_jxmc"></span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">拿本<br />周期</div>
+					<div id="byszs" class="iMap"></div>
+					<div class="iText">指数说明：近12个月驾校“平日计时班”拿本时间均值及行业“平日计时班”拿本时间均值的变动趋势。
+波动因素：拿本周期的波动变化受到约车难易度、驾考政策要求等综合因素影响。</div>
+				</div>
+			</div>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span name="span_jxmc"></span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">约车<br />指数</div>
+					<div id="yczs" class="iMap"></div>
+					<div class="iText">指数说明：近12个月驾校“计时班”约车比及行业“计时班”约车比的变动趋势。
+波动因素：再训人数/可用车辆，受到驾校规模、学车淡旺季等综合因素影响。</div>
+				</div>
+			</div>
+		</div>
+		<!--proxy-->
+		<div id="div_jxsqs" class="wrap mt15 proxy">
+			<h2>授权证书</h2>
+			<div class="picBox"><img id="img_jxsqs" src="" alt="授权证书" /></div>
+		</div>
+		<div class="mask"></div>
+	</body>
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script data-main="js/app/jiaxiao" src="js/require.js"></script>
+	
+</html>

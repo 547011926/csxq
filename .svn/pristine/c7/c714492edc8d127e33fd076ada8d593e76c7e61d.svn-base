@@ -1,0 +1,103 @@
+@charset "utf-8";
+@import "compass/reset";//加载reset模块 全局样式
+@import "compass/css3";//加载css3模块
+.clearfix{}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:before,.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clear{
+  clear:both;
+}
+$bodyBacolor: #ededed;
+@mixin sizing{
+  -webkit-box-sizing: border-box;
+}
+body{
+  background: $bodyBacolor;
+  font-size: 12px;
+  font-family: "微软雅黑", "Times New Roman", "serif";
+}
+$listBacolor:white;
+$listPadding:.5rem;
+$drivingImgWidth:(270px/2.4);
+$drivingImgHeight:(187px/2);
+$borderSize:1px;
+$borderColor:#999;
+$height:1.5rem;
+.list {
+  position: relative;
+  background: $listBacolor;
+  padding: $listPadding;
+  cursor: pointer;
+  margin-top: $height;
+  @include sizing;
+  .drivingImg {
+    position: absolute;
+    top: $listPadding;
+    left: $listPadding;
+    width: $drivingImgWidth;
+    height: $drivingImgHeight;
+    background: #387ec2 url(../image/index_defalut.png) no-repeat center;
+    background-size:90%;
+  }
+  .driving{
+    width: 100%;
+    padding-left:$drivingImgWidth+16px;
+    @include sizing;
+      h1{
+        display: block;
+        height: 1.2rem;
+        border-bottom:$borderSize dashed  $borderColor;
+        margin-bottom: .5rem;
+      }
+
+    $list: map money;
+    @mixin pBacImg {
+      @each $key in $list {
+        &.p-#{$key} {
+          background: url("../image/#{$key}.png") no-repeat 0 center;
+          background-size:1rem ;
+        }
+      }
+    }
+    p{
+      color:$borderColor;
+      height: $height;
+      line-height: $height;
+      padding-left:$height ;
+      @include pBacImg;
+    }
+    .image{
+      img{
+        $size:20px;
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

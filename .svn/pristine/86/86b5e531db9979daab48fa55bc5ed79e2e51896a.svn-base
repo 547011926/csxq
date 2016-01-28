@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+		<title>班车线路</title>
+		<link rel="stylesheet" type="text/css" href="css/jiaxiao.css"/>
+	</head>
+	<body>
+		<div class="wrap luxian">
+			<!--<h2>通州线：从【通州妇幼保健院西门】出发</h2>
+			<p>
+				<span>【第一站】<b>&rarr;</b></span>
+				<span>【第二站】<b>&rarr;</b></span>
+				<span>【第三站】<b>&rarr;</b></span>
+				<span>【第四站】<b>&rarr;</b></span>
+				<span>【第五站】<b>&rarr;</b></span>
+				<span>【第六站】<b>&rarr;</b></span>
+				<span>【第七站】<b>&rarr;</b></span>
+				<span>【第八站】<b>&rarr;</b></span>
+				<span>【第九站】<b>&rarr;</b></span>
+			</p>-->
+		</div>
+	</body>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script data-main="js/app/banchexianlu" src="js/require.js"></script>
+</html>

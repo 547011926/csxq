@@ -1,0 +1,277 @@
+@charset "utf-8";
+/*$img-spacing:60px;*/
+$img-icon_03-spacing: 75px;
+$img-icon_05-spacing: 75px;
+$img-icon_07-spacing: 70px;
+$img-icon_13-spacing: 90px;
+$img-icon_19-spacing: 160px;
+$img-icon_27-spacing: 150px;
+$img-icon_36-spacing: 150px;
+$img-icon_43-spacing: 100px;
+$img-icon_46-spacing: 120px;
+$img-icon_52-spacing: 120px;
+//配置间距
+$img-layout: vertical;
+//默认
+//配置布局方式
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/sprites";
+// 精灵图片控件;
+@import "img/*.png";
+//img文件夹位于images文件夹内并包含所有精灵图片;
+//生成精灵图片位于images文件夹内;并生成编译后的CSS;
+@include all-img-sprites;
+// 为整个精灵地图撰写所有必要的CSS;
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+%clearfix {
+  @include clearfix;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background: #ededed;
+  //font-family: "Microsoft Yahei", "微软雅黑", "宋体", System;
+}
+
+//变量、混合器定义
+$onerem: 1rem;
+$half: .5rem;
+$colorOne: #4196ea;
+$colorTwo: white;
+@mixin border($size, $color) {
+  border: $size solid $color;
+}
+
+@mixin sizing {
+  -webkit-box-sizing: border-box;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin fontSize($size: 1rem) {
+  font-size: $size;
+}
+
+@mixin display($dis: block) {
+  display: $dis;
+}
+
+@mixin height($height, $lineHeight) {
+  height: $height;
+  line-height: $lineHeight;
+}
+
+@mixin letterSpacing($letter: 1px) {
+  letter-spacing: $letter;
+}
+
+@mixin cursor() {
+  cursor: pointer;
+}
+
+@mixin float($map: left) {
+  float: $map;
+}
+
+@mixin textAlign($map: center) {
+  text-align: $map;
+}
+
+@mixin position($position: relative) {
+  position: $position;
+}
+
+@mixin bacgSize($size: 3rem) {
+  background-size: $size;
+}
+
+//index页
+$icons: sprite-map("img/*.png");
+.index-nav {
+  background: $colorTwo;
+  ul {
+    @include clearfix;
+    li {
+      //@extend .img-sprite;
+      //@include img-sprite();// 输出一个独立命名精灵的CSS
+      height: 4rem;
+      @include float;
+      width: 33%;
+      @include textAlign;
+      @include fontSize(0.7rem);
+      //@include sprite-background-position($icons,icon_03,80rem,20%);
+      padding-top: 2.5rem;
+      &:first-child {
+        @extend .img-icon_03; // 这种方法会生成更少的CSS
+        @include bacgSize;
+        background-position: 2rem .5rem;
+      }
+      &:nth-child(2) {
+        @extend .img-icon_05; // 这种方法会生成更少的CSS
+        @include bacgSize;
+        background-position: 2rem -3.1rem;
+      }
+      &:last-child {
+        @extend .img-icon_07; // 这种方法会生成更少的CSS
+        @include bacgSize;
+        background-position: 2rem -6.6rem;
+      }
+
+    }
+  }
+}
+
+.index-main {
+  max-width: 1620px;
+  margin: 0 auto;
+  @include padding($onerem, $onerem, $onerem, $onerem);
+  article {
+    background: $colorTwo;
+    ul {
+      @include clearfix;
+      li {
+        @include float;
+        @include fontSize(0.7rem);
+        @include textAlign;
+        height: 3rem;
+        width: 33.3%;
+        padding-top: 1.7rem;
+      }
+      &:first-child {
+        border-bottom: $onerem solid #ededed;
+        li {
+          &:first-child {
+            @extend .img-icon_19; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            border-right: .1rem solid #ededed;
+            height: 6rem;
+            background-position: 1.2rem -12rem;
+            padding-top: 4rem;
+          }
+          &:nth-child(2) {
+            border-right: .1rem solid #ededed;
+            border-bottom: .1rem solid #ededed;
+            @extend .img-icon_16; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            background-position: 2rem -9.4rem;
+          }
+          &:nth-child(3) {
+            @extend .img-icon_13; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            background-position: 2rem -7rem;
+            border-bottom: .1rem solid #ededed;
+          }
+          &:nth-child(4) {
+            @extend .img-icon_27; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            background-position: 2.3rem -21.2rem;
+            border-right: .1rem solid #ededed;
+          }
+          &:last-child {
+            @extend .img-icon_25; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            background-position: 2.1rem -17.6rem;
+          }
+        }
+      }
+      &:last-child{
+        li{
+          height: 3rem;
+          &:first-child{
+            @extend .img-icon_36; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            background-position: 3.8rem -27.2rem;
+            border-right: .1rem solid #ededed;
+            width: 66.6%;
+            height: 6rem;
+            padding-top: 4rem;
+          }
+          &:nth-child(2){
+            @extend .img-icon_32; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            background-position: 2rem -24.7rem;
+          }
+          &:last-child{
+            border-top: .1rem solid #ededed;
+            @extend .img-icon_39; // 这种方法会生成更少的CSS
+            @include bacgSize(2rem);
+            background-position: 2rem -32.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.index-footer{
+  ul{
+    @include clearfix;
+    background:$colorTwo ;
+    @include fontSize(.7rem);
+    li{
+      height: 4rem;
+      @include float;
+      width: 25%;
+      @include textAlign;
+      padding-top: 2.5rem;
+      &:first-child{
+        @extend .img-icon_43; // 这种方法会生成更少的CSS
+        @include bacgSize(2rem);
+        background-position: 1.7rem -35.5rem;
+      }
+      &:nth-child(2){
+        @extend .img-icon_49; // 这种方法会生成更少的CSS
+        @include bacgSize(2rem);
+        background-position: 1.7rem -42rem;
+      }
+      &:nth-child(3){
+        @extend .img-icon_46; // 这种方法会生成更少的CSS
+        @include bacgSize(2rem);
+        background-position: 1.7rem -38.7rem;
+      }
+      &:last-child{
+        @extend .img-icon_52; // 这种方法会生成更少的CSS
+        @include bacgSize(2rem);
+        background-position: 1.7rem -45rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

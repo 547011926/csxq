@@ -1,0 +1,86 @@
+require.config({
+    paths: {
+        "global": "../../global",
+        "core": "../common.core"
+    },
+    shim: {}
+});
+define(["global", "core"], function (g, core) {
+
+    var check = {
+        checkTel: function (textTel) {
+            var reg = /^1\{d10}$/;
+            textTel.onfocus = function () {
+                this.value = "";
+            }
+            textTel.onblur = function () {
+                var val = textTel.value,
+                    b = reg.test(val);
+                if (!b) {
+                    this.placeholder = "请输入正确的手机号码";
+                    this.style.backgroundColor = "yellow";
+                    return false;
+                }
+                return true;
+            }
+        },
+        btnSubmit: function (textTel) {
+            var btnSubmit = document.getElementById("btnSubmit");
+            btnSubmit.onclick = function () {
+                if (textTel.value == null || textTel.value == undefined || textTel.value == '') {
+                    textTel.placeholder = "请输入手机号码";
+                    textTel.style.backgroundColor = "yellow";
+                    return;
+                }
+//              var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+//              var b = reg.test(textTel.value);
+//              if (!b) {
+//                  this.placeholder = "请输入正确的手机号码";
+//                  this.style.backgroundColor = "yellow";
+//                  return false;
+//              }
+
+				var telReg = !!textTel.value.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/);
+				//如果手机号码不能通过验证
+				if(telReg == false){
+				 	this.placeholder = "请输入正确的手机号码";
+                    this.style.backgroundColor = "yellow";
+                    return false;
+				}
+
+                
+//                var xm = '';
+                var url = g.urlHttp + 'JXBMX/AddyyBmxx';
+                core.getJSONPCache(url, {type: 1, handset: textTel.value}, function (data) {
+                    core.result(data, function (data) {
+                        if (data.code == '0') {
+                            //alertInfo('恭喜你，报名成功');
+                            alert(data.data);
+                            document.getElementById("textTel").value = '';
+                        }
+                    })
+                })
+
+            };
+        },
+        goodList: function () {
+            var url = g.urlHttp + "JXPM/GetMSYXB";
+            core.getJSONPCache(url, {}, function (data) {
+                core.result(data, function (data) {
+                    var dataBase = data.data.Result, str = '';
+                    for (var i = 0; i < dataBase.length; i++) {
+                        str += '<div class="jiaxiao"><em></em><strong>优选榜</strong><span>' + dataBase[i].JXNAME + '</span></div>';
+                    }
+                    $(".main").append(str);
+                })
+            })
+        },
+        init: function () {
+            var textTel = document.getElementById("textTel");
+            this.checkTel(textTel);
+            this.btnSubmit(textTel);
+            this.goodList();
+        }
+    }
+    check.init();
+});

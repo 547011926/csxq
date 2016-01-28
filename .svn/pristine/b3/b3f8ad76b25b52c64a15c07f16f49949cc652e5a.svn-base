@@ -1,0 +1,219 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/css3";
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+%clearfix {
+  @include clearfix;
+}
+
+textarea {
+  resize: none;
+}
+//禁止多行文本被拖拽
+a, input, button {
+  outline: none;
+}
+//去掉点击链接时的虚线边框
+::-moz-focus-inner {
+  border: 0px;
+}
+//掉点击链接时的虚线边框
+a {
+  text-decoration: none;
+}
+$onerem:1rem;
+$half:.5rem;
+$colorOne:#4196ea;
+$colorTwo:white;
+@mixin border($size,$color){
+  border:$size solid $color;
+}
+
+@mixin sizing {
+  -webkit-box-sizing: border-box;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin fontSize($size: 1rem) {
+  font-size: $size;
+}
+
+@mixin display($dis: block) {
+  display: $dis;
+}
+
+@mixin height($height, $lineHeight) {
+  height: $height;
+  line-height: $lineHeight;
+}
+
+@mixin letterSpacing($letter:1px){
+  letter-spacing: $letter;
+}
+
+@mixin cursor(){
+  cursor: pointer;
+}
+
+@mixin float($map:left){
+  float: $map;
+}
+
+@mixin textAlign($map:center){
+  text-align: $map;
+}
+body{
+  @include padding($half,$onerem,$half,$onerem);
+  font-family: "Microsoft Yahei", "微软雅黑", "宋体", System;
+}
+header img{
+  width: 100%;
+  @include border-radius($half);
+}
+article{
+  width: 59%;
+  @include float();
+  @include display(inline-block);
+  @include margin($half,0,$half,0);
+  img{
+    width: 100%;
+    height: 175px;
+  }
+}
+aside{
+  width: 39%;
+  @include float(right);
+  @extend article;
+  img{
+    height: auto;
+  }
+}
+footer{
+  background: $colorOne;
+  color: $colorTwo;
+  font-weight: bold;
+  @include textAlign;
+  @include fontSize(1.5rem);
+  @include padding($half,0,$half,0);
+  @include border-radius($half);
+}
+//index
+.main{
+  $height:2rem;
+  position: relative;
+  background: #ed6247;
+  margin-top: $half;
+  @include border-radius($half);
+  @include padding($half,$half,3rem,$half);
+  .top{
+    @include clearfix;
+    input{
+      $height:1.9rem;
+      float: left;
+      width: 72%;
+      border: none;
+      background: $colorTwo;
+      @include border-radius(.3rem);
+      @include height($height,$height);
+      padding-left: $half;
+      @include sizing;
+    }
+    label{
+      @extend input;
+      float: right;
+      width: 25%;
+      @include textAlign;
+      @include height($height,$height);
+      @include cursor;
+      padding: 0;
+    }
+  }
+  img{
+    width: 100%;
+  }
+  .jiaxiao{
+    $height:2rem;
+    background-color: #ffb339;
+    background-image: image-url("minShengBank_02.png");
+    @include height($height,$height);
+    position: absolute;
+    left: 0;
+    right: 0;
+    i{
+      @include display;
+      border-bottom: $height solid #ff9b24;
+      border-left: 50px solid transparent;
+      height: 0;
+      width: 6rem;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+@media all and (min-width:360px) and (max-width: 400px) {
+  article{
+    width: 64%;
+  }
+  aside{
+    width: 34%;
+  }
+  footer{
+    @include fontSize(1.8rem);
+  }
+}
+@media all and (width: 375px){
+  article {
+    width: 65%;
+  }
+  aside{
+    width: 33%;
+  }
+}
+@media all and (width: 384px){
+  article {
+    width: 66%;
+  }
+  aside{
+    width: 32%;
+  }
+}
+@media all and (width: 393px){
+  article {
+    width: 66%;
+  }
+  aside{
+    width: 31%;
+  }
+}
+@media all and (min-width:414px) and (max-width: 470px) {
+  article{
+    width: 69%;
+    @include margin(.8rem,0,.8rem,0);
+  }
+  aside{
+    width: 29%;
+  }
+  footer{
+    @include fontSize(2rem);
+  }
+}
+

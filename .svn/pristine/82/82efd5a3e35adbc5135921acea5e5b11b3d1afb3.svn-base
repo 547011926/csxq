@@ -1,0 +1,19 @@
+require.config({
+	paths: {
+		"global": "../../global",
+		"core": "../common.core"
+	}
+});
+require(['global', "core"], function(g, core) {
+	var params = core.getUrlRequest();
+	params={'jgid':'118001'};
+	if (params == null)
+		top.location.href = "index.html";
+	var url = g.urlHttp_file + "FileData/" + params.jgid + "/jxjj.json";
+	core.getJSONPCache(url, data, function(data) {
+		core.result(data, function(data) {
+			var jxjj = data.data.Result;
+			$('#img_jxpic').attr('src',jxjj.M_JXFMPIC);
+		})
+	});
+});

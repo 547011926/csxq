@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport"
+	          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+	    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+	    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+	    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+	    <meta HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+		<title>驾校简介</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jiaxiao.css"/>
+		<style type="text/css">
+			 .swiper-container {
+			 	width: 100%;
+			 	height: 200px;
+			 }
+			 
+			 .swiper-slide {
+			 	text-align: center;
+			 	font-size: 18px;
+			 }
+			 
+			 .swiper-slide img {
+			 	width: auto;
+			 	height: auto;
+			 	max-width: 100%;
+			 	max-height: 100%;
+			 	-ms-transform: translate(-50%, -50%);
+			 	-webkit-transform: translate(-50%, -50%);
+			 	-moz-transform: translate(-50%, -50%);
+			 	transform: translate(-50%, -50%);
+			 	position: absolute;
+			 	left: 50%;
+			 	top: 50%;
+			 }
+		</style>
+	</head>
+	<body>
+		<div class="wrap slideBox">
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div id="div_jxjjpic" class="swiper-wrapper">
+					<!--<div class="swiper-slide">
+						<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+						<img data-src="images/huodong_03.jpg" class="swiper-lazy">
+						<!-- Preloader image -->
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>-->
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-white"></div>
+				<!-- Navigation -->
+				<!--<div class="swiper-button-next swiper-button-white"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>-->
+			</div>
+		</div>
+		
+		<div class="wrap mt15" id="jiaxiaoInfo"></div>
+		<!-- Swiper JS -->
+		<script src="js/zepto.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script data-main="js/app/jiaxiaoInfo" src="js/require.js"></script>
+	</body>
+</html>

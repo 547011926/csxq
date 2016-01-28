@@ -1,0 +1,14 @@
+var check= {
+    operation: function (oArticle) {
+        document.getElementsByTagName("article")[0].onclick=function () {
+            window.location.href="yuyue.html";
+        };
+        document.getElementsByTagName("aside")[0].onclick=function () {
+            window.location.href="baoming/index.html";
+        };
+    },
+    init: function () {
+        this.operation();
+    }
+}
+check.init();

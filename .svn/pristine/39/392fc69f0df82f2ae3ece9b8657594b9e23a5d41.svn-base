@@ -1,0 +1,26 @@
+require.config({
+	paths: {
+		"global": "../../global",
+		"core": "../common.core"
+	}
+});
+require(['global', "core"], function(g, core) {
+	var params = core.getUrlRequest();
+	if (params == null)
+		top.location.href = "index.html";
+	var getJXJJ = function() {
+		var url = g.urlHttp_file + "FileData/" + params.jgid + "/jxjj.json";
+		core.getJSONCache(url, {}, function(data) {
+			$("#jiaxiaoInfo").html(data[0].JJ.replace(/zs_kg;/g,"&nbsp;") );
+		})
+	}
+
+
+	//初始化方法
+	var init = function() {
+		getJXJJ();
+	};
+	init();
+});
+
+

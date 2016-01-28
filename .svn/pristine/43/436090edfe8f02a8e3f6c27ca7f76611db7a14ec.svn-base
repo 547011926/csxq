@@ -1,0 +1,24 @@
+var check= {
+    checkTel:function(textTel){
+        var reg = /^1\d{10}$/;
+        textTel.onfocus=function(){
+            this.value="";
+        }
+        textTel.onblur=function(){
+            var val=textTel.value,
+                b=reg.test(val);
+            if(!b){
+                this.placeholder="请输入正确的手机号码";
+                this.style.backgroundColor="greenyellow";
+                return false;
+            }
+            return true;
+        }
+    },
+
+    init: function () {
+        var textTel=document.getElementById("textTel");
+        this.checkTel(textTel);
+    }
+}
+check.init();

@@ -1,0 +1,1 @@
+define([],function(){var e="http://jptest3.xuechebu.com/",t="http://tm.xuechebu.com/web/",n="V1.0.0";return{urlHttp:e,urlHttp_file:t,m_version:n}});

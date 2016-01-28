@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>上传成绩</title>
+</head>
+<body>
+<div id="submit" style="width: 50rem;height: 20rem;line-height: 20rem;font-size: 5rem;cursor: pointer;text-align: center;background: red;color: white">点我啊</div>
+<!--	描述：同app交互禁止改为模块化 -->
+<script src="http://m.xuechebu.com/baoming/js/zepto.min.js"></script>
+<script src="http://m.xuechebu.com/baoming/pub/iapp.js"></script>
+<!--<script src="http://m.xuechebu.com/lib/user.js"></script>-->
+<!--end-->
+<script src="js/require.js" data-main="js/app/url"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta http-equiv="pragma" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="cache-Control" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="expires" content="0"><!--禁止缓存-->
+    <title>考题</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body id="body">
+<div class="questions">
+    <div class="head"></div>
+    <div class="title">
+    <select id="kemu">
+    	<option value="1">科目一</option>
+    	<option value="4">科目四</option>
+    </select>
+    <select id="jiazhao">
+    	<option value="C1/C2/C3">小车</option>
+    	<!--<option value="A2/B2">货车</option>
+    	<option value="A1/A3/B1">客车</option>
+    	<option value="D/E/F">摩托车</option>-->
+    </select>
+    </div>
+    <div class="show">
+        <p>考试题库：<span id="tk_num">100</span>题</p>
+        <p>考试时间：<span id="tk_time">45</span>分钟</p>
+        <p>考试标准：满分100分&nbsp;&nbsp;90分及格</p>
+    </div>
+    <div class="action" id="StartKaoShi">全真模拟考题</div>
+</div>
+<script src="http://m.xuechebu.com/baoming/js/zepto.min.js"></script>
+<script src="http://jptest5.xuechebu.com/m/pub/iapp.js"></script>
+<script data-main="js/app/kaoti" src="js/require.js"></script>
+</body>
+</html>

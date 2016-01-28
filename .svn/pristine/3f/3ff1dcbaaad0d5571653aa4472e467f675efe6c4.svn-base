@@ -1,0 +1,32 @@
+require.config({
+	paths: {
+		"global": "../../global",
+		"core": "../common.core"
+	}
+});
+require(['global', "core"], function(g, core) {
+	var params = core.getUrlRequest();
+	var yybm = function() {
+		$("#btnSubmit").unbind("click").click(function() {
+			core.getJSONPCache(g.urlHttp + 'JXBMX/AddyyBmxx', {
+				handset: $("#textTel").val(),
+				type: "1"
+			}, function(data) {
+				core.result(data, function(data) {
+					if (data.code == 0)
+						alert(data.data);
+					else
+						alert(data.message);
+				})
+			});
+		})
+	}
+
+
+	//初始化方法
+	var init = function() {
+		yybm();
+	};
+	init();
+
+});

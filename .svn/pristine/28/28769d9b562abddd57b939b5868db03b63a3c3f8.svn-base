@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta http-equiv="pragma" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="cache-Control" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="expires" content="0"><!--禁止缓存-->
+    <title>报名</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body id="body">
+    <div class="baomingBox" id="baomingBox">
+    	<div id='dingdanjine'><span>订单金额</span><strong id="orderMoney"></strong><a href='javascript:;' class='tijiao' id='btn_commit'>提交订单</a></div>
+        <div class="baoming">
+            <div class="touxiang"></div>
+            <div class="baobanxiangqing" id="baoming"></div>
+            <form method="post" id="fm">
+                <div class="ziliao">
+                	<input type="hidden" value="1" name="ClientCode" id="ClientCode" />
+                	<input type="hidden" value="" name="BXID" id="BXID" />
+                	<input type="hidden" value="" name="HKLX" id="HKLX" />
+                	<input type="hidden" value="" name="ZFLX" id="ZFLX" />
+                	<input type="hidden" value="" name="CJRID" id="CJRID" />
+					<ul>
+	                    <li>
+	                        <input type="text" placeholder="请输入姓名" maxlength="6" id="textName" name="BMR">
+	                    </li>
+	                    <li>
+	                        <select name="ZJLX" id="selPapers">
+	                            <option value="1">身份证</option>
+	                            <option value="2">军官证</option>
+	                        </select>
+	                    </li>
+	                    <li>
+	                        <input type="text" placeholder="请输入证件号码" id="textSfzh" name="ZJHM">
+	                    </li>
+	                    <li id="hukou">
+	                        <em data-val="1">本地</em>
+	                        <em data-val="2" class="cur">外阜</em>
+	                    </li>
+	                    <li>
+	                        <span><i>手机号码</i><i>*</i></span>
+	                        <input type="number" placeholder="请输入手机号码" maxlength="11" id="textTel" name="TEL">
+	                    </li>
+	                    <li>
+	                        <input type="number" placeholder="请输入座机号码" id="textTelephone">
+	                    </li>
+	                    <li id="tuijianren">
+	                        <input type="text" name="TJRXM" placeholder="请输入推荐人手机号" id="textReferralCode">
+	                    </li>
+	                    <li>
+	                        <textarea name="BZ" placeholder="有啥想说的尽管留" id="textRemarks" maxlength="20"></textarea>
+	                    </li>
+	                    <li id="zhifu">
+	                        <span>支付方式</span>
+	                        <em data-val="1" class="cur">在线支付</em>
+	                        <em data-val="2">上门服务</em>
+	                    </li>
+	                    <li class="xieyi">
+	                        <input id="xieyi" type="checkbox" checked>
+	                        <strong id="xieyiCentent">我已阅读并同意《三方代收代付协议》</span></strong>
+	                    </li>
+	                </ul>
+	                <div class="baomingxuanxiang">
+	                    <em>报名条件</em>
+	                    <em>报名材料</em>
+	                </div>
+	            </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="tjIcon">
+       <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1255443433'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255443433%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>    
+    </div>	
+    	
+    <!--	描述：同app交互禁止改为模块化 -->
+    <script src="js/zepto.min.js"></script>
+    <script src="pub/iapp.js"></script>
+    <!--end-->
+    <script data-main="js/app/baoming" src="js/require.js"></script>
+    <script data-main="js/app/touch" src="js/require.js"></script>
+</body>
+</html>

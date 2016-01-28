@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html  style="height: 100%">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta http-equiv="pragma" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="cache-Control" content="no-cache"><!--禁止缓存-->
+    <meta http-equiv="expires" content="0"><!--禁止缓存-->
+    <title>选驾校</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--	描述：同app交互禁止改为模块化 -->
+    <script src="js/zepto.min.js"></script>
+    <!--end-->
+    
+    <script src="../js/lib/cmbcForClient.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script data-main="js/app/index" src="js/require.js"></script>
+</head>
+<body id="tbody"  style="height: 100%">
+    <div class="index-lists" id="jxlist"></div>
+    <div id="tjIcon">
+       <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1255443433'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255443433%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>    
+    </div>
+    
+    
+    
+</body>
+</html>

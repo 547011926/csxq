@@ -1,0 +1,323 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+ol, ul { list-style: none;}
+:focus { outline: 0;}
+table { border-collapse: collapse;  border-spacing: 0;}
+* {
+  margin: 0;
+  padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+} 
+html {
+  color: #666;
+  font-family: 'Microsoft Yahei'  'Helvetica Neue', Helvetica, STHeiTi, Arial, sans-serif;
+}
+body{
+height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch;
+}
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+img {
+  border: none;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+  font-size: 0.9rem;
+}
+a:visited {
+    color: #000;
+}
+a:active { outline: 0; color: #387ec2; }
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+em {
+  font-style: normal;
+}
+input {
+  outline: none;
+}
+input[type="text"],
+input[type="tel"] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+  border-radius: 0; 
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { color: #999; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #999; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #999; }
+//mixin S
+$prefixForWebkit:    true !default;
+$prefixForMozilla:   true !default;
+$prefixForMicrosoft: true !default;
+$prefixForOpera:     false !default;
+$prefixNo:           true !default;
+
+@mixin prefixer($property,$value,$prefixes:webkit moz ms){
+    @each $prefix in $prefixes {
+        @if $prefix == webkit and $prefixForWebkit == true {
+            -webkit-#{$property}:$value;
+        }
+        @else if $prefix == moz and $prefixForMozilla == true {
+            -moz-#{$property}:$value;
+        }
+        @else if $prefix == ms and $prefixForMicrosoft == true {
+            -ms-#{$property}:$value;
+        }
+        @else if $prefix == o and $prefixForOpera == true {
+            -o-#{$property}:$value;
+        }
+    }
+    @if $prefixNo {
+        #{$property}:$value;
+    }
+}
+//mixin E
+@media all and(max-width:374px){
+    html {
+        font-size: 14px;
+    }
+}
+@media all and(min-width:375px) and (max-width:413px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media all and(min-width:414px) and (max-width:470px){
+    html {
+        font-size: 16px;
+    }
+}
+@media all and(min-width:471px){
+    html {
+        font-size: 18px;
+    }
+}
+//choosesafe
+.wrap {
+    background: #FFF;
+    padding: 0.5rem;
+}
+
+.line {
+    margin-bottom: 0.6rem;
+    line-height: 2rem;
+    position: relative;
+    
+    label {
+        display: inline-block;
+        width: 6rem;
+        text-align: right;
+    }
+    input[type='text'],input[type='email'] {
+        width: 11rem;
+        height: 1.5rem;
+        padding-left: 5px;
+    }
+    select {
+        width: 11.55rem;
+        height: 2rem;
+    }
+    span:empty {
+        display: none;
+    }
+}
+    div.error {
+        line-height: 1.5rem;
+          clear: both;
+          margin-top: .5rem;
+          color: white;
+          position: relative;
+          padding: 0 0.5rem;
+          background: #66abee;
+          text-align: center;
+          border: none;
+          z-index: 1;
+          @include prefixer('border-radius',5px);
+    }
+    div.error:before {
+        content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -4px;
+            margin-left: -4px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #66abee;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+    }
+
+.xfx,.ywx {
+    border-top: dashed 1px #A9A9A9;
+    margin-top: 1rem;
+    
+    b {
+        font-weight: normal;
+    }
+    input[type='checkbox'] {
+        vertical-align: middle;
+    }
+}
+.xTit {
+    height: 2rem;
+    line-height: 2rem;
+}
+.xType {
+    span {
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+    }
+}
+.xProtocol {
+    text-align: center;
+}
+.xf {
+    .xType,.xProtocol {
+        height: 2rem;
+        line-height: 2rem;
+    }
+    .xType {
+        margin-top: 10px;
+    }
+    .xfNum {
+        width: 12rem;
+        height: 1.5rem;
+        padding-left: 5px;
+    }
+}
+    .protocol_ywx,.protocol_xfx {
+        background: #61a1df;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        @include prefixer ('border-radius',5px);
+        text-align: center;
+        color: #FFF;
+        font-size: 1rem;
+        
+        span {
+            margin-right: 1rem;
+            font-size: 1rem;
+        }
+    }
+.ywx {
+    border-bottom: dashed 1px #A9A9A9;
+    padding-bottom: 1rem;
+}
+.lineBtnA,.protocolBtn {
+    background: #61a1df;
+    @include prefixer ('border-radius',5px);
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1rem;
+    border: none;
+    margin: 1rem auto;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    font-weight: 600;
+}
+.protocolBtn {
+    display: block;
+}
+.sameBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    input {
+        vertical-align: middle;
+        margin-right: 3px;
+    }
+}
+.protocolBox {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.closeBtn {
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    text-align: center;
+    @include prefixer('border-radius',5px);
+    background: #61a1df;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

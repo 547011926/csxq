@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script>
+        /*动态设置像素比*/
+        var iScale = 1;
+        iScale = iScale / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=' + iScale + ',minimum-scale=' + iScale + ',maximum-scale=' + iScale + '">')
+        /*动态设置文字大小*/
+        function resize(){
+            var iWidth = document.documentElement.clientWidth;
+            iWidth>1620?1620:iWidth;
+            document.getElementsByTagName('html')[0].style.fontSize = iWidth / 16 + 'px';
+        }
+        resize();
+
+
+    </script>
+    <style>
+        .swiper-container {
+            height: 8rem;
+        }
+        .swiper-slide {
+            background-size: 100% 8rem;
+        }
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(./images/banner_01.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(./images/banner_02.jpg)"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-white"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+</div>
+<!-- Swiper JS -->
+<script src="js/lib/swiper.min.js"></script>
+<script data-main="js/app/index.js" src="js/require.js"></script>
+<!-- Initialize Swiper -->
+
+<nav class="index-nav">
+    <ul>
+        <li>科目一</li>
+        <li>科目四</li>
+        <li>小车</li>
+    </ul>
+</nav>
+
+<section class="index-main">
+    <article>
+        <ul>
+            <li>顺序练习</li>
+            <li>随机练习</li>
+            <li>章节练习</li>
+            <li>专项练习</li>
+            <li>练习统计</li>
+        </ul>
+        <ul>
+            <li>模拟考试</li>
+            <li>我的成绩</li>
+            <li>排行榜</li>
+        </ul>
+    </article>
+</section>
+
+<footer class="index-footer">
+    <ul>
+        <li>我的错题</li>
+        <li>我的收藏</li>
+        <li>我要预约</li>
+        <li>在线课堂</li>
+    </ul>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>教练员查段</title>
+    <script>
+        !function () {
+            function setFontSize() {
+                var deviceWidth = document.documentElement.clientWidth;
+                if (deviceWidth > 640) {
+                    deviceWidth = 640;
+                }
+                document.documentElement.style.fontSize = deviceWidth / 6.4 + "px";
+            }
+
+            var _t = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(_t);
+                _t = setTimeout(setFontSize, 100);
+            }, false);
+            setFontSize();
+        }(window);
+    </script>
+</head>
+<body>
+这有多少
+
+
+
+
+
+
+</body>
+</html>

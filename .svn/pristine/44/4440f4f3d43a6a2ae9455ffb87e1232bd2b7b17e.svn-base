@@ -1,0 +1,37 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/css3";
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+%clearfix {
+  @include clearfix;
+}
+
+textarea {
+  resize: none;
+}
+//禁止多行文本被拖拽
+a, input, button {
+  outline: none;
+}
+//去掉点击链接时的虚线边框
+::-moz-focus-inner {
+  border: 0px;
+}
+///掉点击链接时的虚线边框
+a {
+  text-decoration: none;
+}
+
+
+

@@ -1,0 +1,84 @@
+require.config({
+	paths: {
+		"global": "../../global",
+		"core": "../common.core"
+	},
+	shim: {
+
+	}
+});
+define(["global", "core"], function(g, core) {
+
+	var check = {
+		checkTel: function(textTel) {
+			var reg = /^1\d{10}$/;
+			textTel.onfocus = function() {
+				this.value = "";
+			}
+			textTel.onblur = function() {
+				var val = textTel.value,
+					b = reg.test(val);
+				if (!b) {
+					this.placeholder = "请输入正确的手机号码";
+					this.style.backgroundColor = "greenyellow";
+					return false;
+				}
+				return true;
+			}
+		},
+		btnSubmit: function() {
+			var btnSubmit = document.getElementById("btnSubmit");
+			btnSubmit.onclick = function() {
+				var tel = document.getElementById("textTel").value;
+				if (tel == null || tel == undefined || tel == '') {
+					console.log('err:Phone number is null');
+					return;
+				}
+				var reg = /^1\d{10}$/;
+				if(!reg.test(tel)){
+					console.log('手机号码错误');
+					return;
+				}
+				
+				var xm = '';
+				var url = g.urlHttp+'JXBMX/AddyyBmxx';
+				core.getJSONPCache(url,{type:1,handset:tel,xm:xm},function(data){
+					core.result(data, function(data) {
+						if(data.code == '0'){
+//							var oAlert=core.createAlert({
+//								content:"恭喜你，报名成功",
+//								oReturn:"取消"
+//							});
+//							oAlert.queding.onclick= function () {
+//								this.parentNode.parentNode.parentNode.style.display="none";
+//							}
+//							oAlert.oReturn.onclick= function () {
+//								this.parentNode.parentNode.parentNode.style.display="none";
+//							}
+							alertInfo('恭喜你，报名成功');
+							document.getElementById("textTel").value = '';
+						}
+					})
+					
+					
+				})
+
+			};
+		},
+
+		init: function() {
+			var textTel = document.getElementById("textTel");
+			this.checkTel(textTel);
+			
+			//username
+			
+			
+		}
+	}
+	check.init();
+	check.btnSubmit();
+
+	alert(window.location.href);
+
+
+});

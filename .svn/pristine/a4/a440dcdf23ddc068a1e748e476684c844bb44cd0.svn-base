@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+		<title>学车不-找驾校</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jiaxiao.css"/>
+	<!--	描述：同app交互禁止改为模块化 -->
+    <script src="js/zepto.min.js"></script>
+    <script src="pub/iapp.js"></script>
+    <!--end-->
+	<script data-main="js/app/jiaxiao" src="js/require.js"></script>
+		<style>
+				.swiperBox {
+					position: absolute;
+					width: 16.67rem;
+					height: 7.08rem;
+				}
+			    .swiper-container {
+			    	width: 100%;
+			    	height: 170px;
+			    	margin: 20px auto;
+			    }
+			    
+			    .swiper-slide {
+			    	text-align: center;
+			    	font-size: 18px;
+			    	background: #fff;
+			    	/* Center slide text vertically */
+			    	display: -webkit-box;
+			    	display: -ms-flexbox;
+			    	display: -webkit-flex;
+			    	display: flex;
+			    	-webkit-box-pack: center;
+			    	-ms-flex-pack: center;
+			    	-webkit-justify-content: center;
+			    	justify-content: center;
+			    	-webkit-box-align: center;
+			    	-ms-flex-align: center;
+			    	-webkit-align-items: center;
+			    	align-items: center;
+			    }
+		</style>
+	</head>
+	<body>
+		<!--detail-->
+		<div class="wrap mt15 box">
+			<div class="drivingPic"><img id="img_jxpic" src="images/bx_byd.jpg" alt="驾校图片" /></div>
+			<div class="drivingDetail">
+				<h2 class="detailTit">海淀驾校</h2>
+				<div class="detailCon">
+					<div class="leftCon">
+						<!--<ul class="star">
+							<li class="on"><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+						</ul>-->
+						<div class="address">海淀区北安河路69号</div>
+					</div>
+					<div class="rightCon">
+						<ul class="price">
+							<li>4,800元</li>
+							<!--<li>5km</li>-->
+						</ul>
+					</div>
+				</div>
+				<div class="images">
+					<img src="images/icon_02.png">
+					<img src="images/icon_04.png">
+					<img src="images/icon_06.png">
+					<img src="images/icon_08.png">
+					<img src="images/icon_10.png">
+					<img src="images/icon_12.png">
+					<img src="images/icon_14.png">
+					<img src="images/icon_16.png">
+				</div>
+				<div class="swiperBox">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/xbfl_01.png" alt="" /></div>
+							<div class="swiper-slide"><img src="images/xbfl_02.png" alt="" /></div>
+							<div class="swiper-slide"><img src="images/xbfl_03.png" alt="" /></div>
+							<div class="swiper-slide"><img src="images/xbfl_04.png" alt="" /></div>
+							<div class="swiper-slide"><img src="images/xbfl_05.png" alt="" /></div>
+							<div class="swiper-slide"><img src="images/xbfl_06.png" alt="" /></div>
+							<div class="swiper-slide"><img src="images/xbfl_07.png" alt="" /></div>
+							<div class="swiper-slide"><img src="images/xbfl_08.png" alt="" /></div>
+						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Recommend-->
+		<div class="wrap mt15">
+			<a href="jiaxiaoInfo.html" class="intro">
+				北京市海淀区远大汽车驾驶学校（以下简称远大驾校）注册成立于1984年，是当时......
+			</a>
+			<a href="javascript:;" class="addLink">北京市海淀区北安河路69号北京市海淀区北安河路69号北京市海淀区北安河路69号北京市海淀区北安河路69号</a>
+			<ul class="box enlist">
+				<li>报名</li>
+				<li>286人报过</li>
+			</ul>
+			<ul class="btnBox box">
+				<li><a href="javascript:;" class="orderBtn">预约报名</a></li>
+				<li><a href="javascript:;" class="recommendBtn">推荐报名</a></li>
+			</ul>
+			<a href="javascript:;" class="route">
+				<p>班车线路</p>
+				<p>20条线路</p>
+			</a>
+			<a href="javascript:;" class="drivingType">
+				<h2>班型</h2>
+				<div class="typePic"><img src="images/bx_byd.jpg" alt="班型图片" /></div>
+				<p>
+					<span>金牌驾校预约计时班</span><br />
+					<span>训练时间：</span>全周7:00-17:00<br />
+					<span>训练车型：</span>宝来手动档<br />
+					<span>驾照类型：</span>B1<br />
+				</p>
+			</a>
+		</div>
+		
+		<!--scale index-->
+		<div class="wrap mt15 scaleIndex">
+			<h2 class="scaleTit">规模指数</h2>
+			<ul>
+				<li>成立时间:1984年</li>
+				<li>班次种类:齐全</li>
+				<li>考试场地:本校</li>
+			</ul>
+			<ul>
+				<li>办学宗旨:花园式校区,朋友式教学</li>
+				<li>班车路线:25条</li>
+			</ul>
+			<div class="index mt15"></div>
+			<div class="index mt15"></div>
+			<div class="index mt15"></div>
+		</div>
+		
+		<!--xiaobu index-->
+		<div class="wrap mt15 xbIndex">
+			<h2 class="scaleTit">小不指数</h2>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span>远大驾校</span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">价格<br />指数</div>
+					<div class="iMap"></div>
+				</div>
+			</div>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span>远大驾校</span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">学员<br />指数</div>
+					<div class="iMap"></div>
+				</div>
+			</div>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span>远大驾校</span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">拿本<br />周期</div>
+					<div class="iMap"></div>
+				</div>
+			</div>
+			<div class="index mt15">
+				<div class="tit">
+					<span class="redIcon"></span>
+					<span>远大驾校</span>
+					<span class="blueIcon"></span>
+					<span>行业趋势</span>
+				</div>
+				<div class="indexCon">
+					<div class="look">约车<br />指数</div>
+					<div class="iMap"></div>
+				</div>
+			</div>
+		</div>
+		<!--proxy-->
+		<div class="wrap mt15 proxy">
+			<h2>授权证书</h2>
+			<div class="picBox"><img src="images/proxy_bf.jpg" alt="授权证书" /></div>
+		</div>
+	</body>
+	<script src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 30,
+        freeMode: true
+    });
+//	html字体大小
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				docEl.style.fontSize = 12 * (clientWidth / 320) + 'px';
+			};
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+</html>

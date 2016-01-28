@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+		<title>预约报名</title>
+		<link rel="stylesheet" type="text/css" href="css/jiaxiao.css"/>
+	</head>
+	<body style="background: #FFF;">
+		<header class="yuyueTop"><img src="images/yuyue_header.jpg" /></header>
+		<div class=" yuyueMain">
+			<div class="top">
+				<input type="number" placeholder="输入手机号" id="textTel">
+				<label id="btnSubmit">确认</label>
+			</div>
+			<img src="images/yuyue_btm_img.jpg" class="yuyueAd" />
+		</div>
+	</body>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script data-main="js/app/yuyue" src="js/require.js"></script>
+	<script type="text/javascript">
+	//	html字体大小
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 12 * (clientWidth / 320) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</html>

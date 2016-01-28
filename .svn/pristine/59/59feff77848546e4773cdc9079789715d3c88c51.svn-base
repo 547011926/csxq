@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+    <title>班型价格</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="backOff">班型价格<i></i><i></i></div>
+<div class="inner">
+    <div class="lists"  id="banxingjiage-lists"></div>
+</div>
+<div id="tjIcon">
+       <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1255443433'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255443433%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>    
+    </div>
+<!--	描述：同app交互禁止改为模块化 -->
+
+    <script src="http://m.xuechebu.com/baoming/js/zepto.min.js"></script>
+    <!--end-->
+<script data-main="js/app/banxingjiage" src="js/require.js"></script>
+</body>
+</html>

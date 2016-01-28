@@ -1,0 +1,146 @@
+require.config({
+	paths: {
+		'global': '../../global',
+		'core': '../common.core',
+		'user': 'user',
+
+		'comm': 'communal'
+		//'app':'../application/application',
+		//'db':'../application/database'
+	},
+	shim: {
+
+	}
+});
+require(['global', 'core', 'user', 'comm'], function(global, core, u, comm) {
+
+	var initOperate = {
+			CheackUpdate: function() {
+
+				var doup = comm.CheackUpdate('kaoshi', function(data) {
+					if (data == null) {
+						//是最新的执行
+						//var strStart = '按交管部门通知，科目四考试系统全面升级，全真模拟考试下不能修改答案，每做一题，系统自动计算错误题数，及格标准为90分';
+						//core.createConfirm(strStart,'100%','100%');
+					} else {
+						//不是最新 data是需要更新的版本信息
+						var str = '您的试题不是最新的，请先下载考题';
+                        var oAlert=core.createAlert({
+                            content:str,
+                            oBottom:"-65%"
+                        });
+                        oAlert.queding.addEventListener("touchstart",function(){
+                            this.parentNode.parentNode.parentNode.style.display="none";
+                            var oAlert=core.createAlert({
+                                content:'正在下载考题，请稍后',
+                                oBottom:"-65%"
+                            });
+                            comm.UploadData(function(){
+                                //初始化数据库，下载完数据的回调
+                                var oAlert=core.createAlert({
+                                    content:'题库下载完毕，小不祝您拿本顺利',
+                                    oBottom:"-65%"
+                                });
+
+                                //下载完毕  写入版本号
+                                var s=window.localStorage;
+                                s.setItem('tk_version', data.VERSIONSNUM);
+                                oAlert.queding.addEventListener("touchstart",function(){
+
+                                })
+                            });
+                        })
+
+					};
+				})
+			},
+			InitDoMake:function(){
+				$('#StartKaoShi').on('click',function(){
+					//window.location = 'kaoshi.html';
+					var strStart = '按交管部门通知，科目'+($('#kemu').val()=='1'?'一':'四')+'考试系统全面升级，全真模拟考试下不能修改答案，每做一题，系统自动计算错误题数，及格标准为90分';
+
+                    var oAlert=core.createAlert({
+                        content:strStart,
+                        oReturn:"返回",
+                        oBottom:"-65%"
+                    });
+                    oAlert.queding.addEventListener("touchstart",function(){
+                        var jiazhao = $('#jiazhao').val();
+                        var kemu = $('#kemu').val();
+                        if(jiazhao==null||kemu==null){
+                            return;
+                        }
+                        window.location = 'kaoshi.html?kemu='+kemu+'&jiazhao='+jiazhao;
+                    })
+                    oAlert.oReturn.addEventListener("touchstart",function(){
+                        this.parentNode.parentNode.parentNode.style.display="none";
+                    })
+				})
+
+				$('#kemu').on('change',function(){
+					ChangeTknum();
+				});
+				$('#jiazhao').on('change',function(){
+					ChangeTknum();
+
+					//如果没有数据 提示下载
+					comm.SelectByJiaZhaoType($('#kemu').val(),$('#jiazhao').val(),function(data){
+						if(data[0] > 0){
+							//alert(123);
+						}
+						else{
+							//没有数据  提示用户下载；
+							if(confirm('没有数据库，是否下载')){
+
+							}
+
+						}
+
+					});
+
+
+				});
+				//根据科目驾照类型显示不同
+				function ChangeTknum(){
+					var jz = $('#jiazhao').val();
+					var km = $('#kemu').val();
+					if(jz == 'D/E/F'){
+						$('#tk_num').text('50');
+						$('#tk_time').text('30');
+					}
+					else{
+						if(km == '1'){
+							$('#tk_num').text('100');
+							$('#tk_time').text('45');
+						}
+						else if(km == '4'){
+							$('#tk_num').text('50');
+							$('#tk_time').text('30');
+						}
+					}
+				}
+
+			}
+
+
+		}
+
+
+//document.write("123");
+
+
+	//打开或者创建数据库
+	comm.OpenOrCreateDB();
+	initOperate.CheackUpdate();
+	initOperate.InitDoMake();
+
+
+	//$('#jiazhao').change();
+
+
+
+
+	//core.createConfirm('按交管部门通知，科目四考试系统全面升级，全真模拟考试下不能修改答案，每做一题，系统自动计算错误题数，及格标准为90分','100%','100%');
+
+
+})

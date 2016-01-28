@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport"
+	          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	    <meta name="format-detection" content="telephone=no"/>
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+	    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+	    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+	    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+	    <meta HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+		<title>驾校简介</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jiaxiao.css"/>
+		<style type="text/css">
+			 .swiper-container {
+			 	width: 100%;
+			 	height: 200px;
+			 }
+			 
+			 .swiper-slide {
+			 	text-align: center;
+			 	font-size: 18px;
+			 }
+			 
+			 .swiper-slide img {
+			 	width: auto;
+			 	height: auto;
+			 	max-width: 100%;
+			 	max-height: 100%;
+			 	-ms-transform: translate(-50%, -50%);
+			 	-webkit-transform: translate(-50%, -50%);
+			 	-moz-transform: translate(-50%, -50%);
+			 	transform: translate(-50%, -50%);
+			 	position: absolute;
+			 	left: 50%;
+			 	top: 50%;
+			 }
+		</style>
+	</head>
+	<body>
+		<div class="wrap slideBox">
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+						<img data-src="images/huodong_03.jpg" class="swiper-lazy">
+						<!-- Preloader image -->
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images/huodong_03.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images/huodong_03.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images/huodong_03.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images/huodong_03.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images/huodong_03.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+			
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-white"></div>
+				<!-- Navigation -->
+				<!--<div class="swiper-button-next swiper-button-white"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>-->
+			</div>
+		</div>
+		
+		<div class="wrap mt15" id="jiaxiaoInfo">
+			<h2>海驾概况</h2> 
+<p>海淀驾校建立于1985年，位于海淀区大西山旅游风景区，占地3000余亩，背靠西山，东临京密引水渠，北接凤凰岭，南临旅游胜地大觉寺、鹫峰、阳台山。2010年政府投资兴建的旅游观光路贯穿教练场上方。海淀驾校拥有自己的考试场（京海考试场），是场校合一的单位，历经30年的发展，在取得经济效益和社会效益双丰收的同时，为全市驾校行业的发展做出了积极贡献。海淀驾校在30年的经营管理过程中，做了许多工作，取得一定的成效。未来，我们将继续不断完善教学设施，强化科学管理，为学员提供更好更优质的服务。
+海淀驾校欢迎您！</p>
+<h2>部分荣誉</h2>
+<p>1、 2003年海淀驾校被评为北京市精神文明先进单位。<br />
+2、 2003年8月海淀驾校编写了北京市第一套自动档教练车教材，为北京公安交通管理局便民措施的落实起到积极作用。<br />
+3、 2004年被北京市交管局车管所评为“星级驾校”。<br />
+4、 2005年被北京市评为首都绿化美化花园式单位。<br />
+5、 2006年至2014年持续评为海淀区绿化美化先进单位。<br />
+6、 2007年北京市质量协会授予海淀驾校质量信得过服务单位。<br />
+7、 2008年消防工作先进单位。<br />
+8、 2009年被北京市工商业联合会北京市商会评为“绿色企业”。<br />
+9、 2007年至2011年海淀驾校分别获得市、区级交通安全先进单位。<br />
+10、 2013年获得中国315网2013年度诚信展播单位。<br />
+11、 2013年度全国驾培行业文明诚信优质服务优秀单位。<br />
+12、 2013年至2014年度诚信经营先进单位。</p>
+<p>在海淀驾校获得以上荣誉的同时海淀驾校校长张燕晨同志被选为北京市交管局警风监督员；北京市青年企业家协会理事；海淀区政协委员等多项职位及荣誉。</p>
+<h2>办学理念</h2>
+<p>2010年度，海驾在全校范围内开展了“优质服务年”活动、2011年度开展了“窗口服务年”活动，在2012年度又开展了“创优服务年”的活动。在2013年度开展了“服务质量年”的活动.在2014年度开展了“提升服务质量年”的活动。通过以上开创优质服务活动的长时间开展，使海驾员工从思想上认识到提高服务质量的重要性，大大提高了服务质量，使学员真正感受到了海淀驾校作为品牌驾校的信誉。
+教学规模和建设</p>
+<p>海驾现有教练员900余名，教练车、考试车766台，模拟器75台，符合公安部《机动车登记规定》。所有教练车辆档案由安纪科负责管理，每年按规定时间进行年检，按时缴纳保险。培训部负责建立教练车、考试车及附属设施台帐，制定车辆年度、季度的维修保养计划，并组织实施。
+海淀驾校训练道路总长近86公里，练桩场地7万平方米，道路全部铺设水泥或沥青路面。场内训练道路单向行车宽度大于3.5米，场内各种交通设施配备齐全、标志标线清晰完整。
+海驾的训练考试场地，在满足本校学员训练外，同时还为6所驾校提供进场训练及考试服务。2010年以来，我校分期投资，在场内进行绿化改造，共种植各类树木、花灌木48000余株，实现了三季有花四季常绿的优美训练环境；投资1300余万，在原自然排洪渠基础上，分几期建成了全长1公里的水系景观工程，既能收集场地内的雨水，又改善了海驾校园环境。学员学习驾驶技能的同时，还能享受到优美的环境、呼吸到清新的空气。</p>
+<p>2006年建设使用科目一法规教学楼，面积3860平米，设立了八个教室，配备了先进的多媒体教学设施，可同时容纳1360人进行培训，为学员提供了舒适的学习环境。为京海车辆管理所办理法规培训手续提供了办公场地。</p>
+<p>科目二桩、路考试设施设备，全部按照公安部111号令进行建设，基础设施齐全。2011年投资1800万元建成A、B两个考试区，能够同时满足800名学员模拟训练和考试的需求。
+2009年建立了科目三实路考试待考场，按照车管所要求改装了实路考试用车50余台，选定了3条考试路线，满足实路学员考试需求。</p>
+<h2>配套设施</h2>
+<p>海驾目前拥有大型班车50余辆，全部更新空调班车。每天分几个时段、发出近30条线路免费接送学员。我校对班车司机每月进行安全行车的培训教育。每名司机在发车前15分钟列队迎候学员，并解答学员的问题。制定班车司机工作守则、服务规范，每季度对班车司机在安全行车、服务规范等方面进行考核。
+手续大厅建筑面积360平方米，负责对学员训练进行计时管理，为学员办理各项计时培训业务。特别开设了老年特殊学员的专用绿色服务通道，为他们提供更方便快捷的服务。
+为保证学员的休息，我校开设了学员休息室，配备了桌、椅、空调等设施。学员餐厅可容纳500名学员同时就餐，保证了学员在训练之余有一个良好的休息、用餐环境。
+各职能科室的办公环境宽敞整洁，随时为学员提供良好的服务。
+校园设立广播系统，随时播报各项通知，新政策，及时传达到学员。在手续大厅设置公告栏，学员可以清楚看到办理业务手续的流程以及有关收费项目和收费标准。严格执行物价部门和车管所批准的收费标准和收费项目，杜绝增加收费项目或者提高收费标准。学员报名时，签订合法有效的“培训协议”，详细规定描述了双方的权利和义务，学车费用明细、办理日期及服务内容及收费标准。使学员利益得到有效的保障。</p>
+		</div>
+		<!-- Swiper JS -->
+		<script src="js/zepto.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script data-main="js/app/jiaxiaoInfo" src="js/require.js"></script>
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+			        pagination: '.swiper-pagination',
+			        // Disable preloading of all images
+			        preloadImages: true,
+			        // Enable lazy loading
+			        lazyLoading: true,
+			        autoplay: 5000
+			    });
+		</script>
+	</body>
+</html>

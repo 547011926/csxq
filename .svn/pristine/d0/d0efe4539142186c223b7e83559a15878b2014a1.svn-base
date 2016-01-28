@@ -1,0 +1,69 @@
+require.config({
+    paths: {
+        "global": "../../global",
+        "core": "../common.core"
+    },
+    shim: {}
+});
+define(["global", "core"], function (g, core) {
+
+    var check = {
+        checkTel: function (textTel) {
+            var reg = /^1(3[0-9]|5[012356789]|7[678]|8[0-9]|4[57]){1}\d{8}$/;
+            textTel.onfocus = function () {
+                this.value = "";
+                this.placeholder = "";
+                this.style.backgroundColor = "white";
+            }
+            textTel.onblur = function () {
+                var val = textTel.value,
+                    b = reg.test(val);
+                if (!b) {
+                    this.placeholder = "请输入正确的手机号码";
+                    this.style.backgroundColor = "yellow";
+                    return false;
+                }
+                return true;
+            }
+        },
+        btnSubmit: function (textTel) {
+            var btnSubmit = document.getElementById("btnSubmit");
+            btnSubmit.onclick = function () {
+                if (textTel.value == null || textTel.value == undefined || textTel.value == '') {
+                    textTel.placeholder = "手机号码不能为空";
+                    textTel.style.backgroundColor = "yellow";
+                    return;
+                }
+                var url = g.urlHttp + 'JXBMX/AddyyBmxx';
+                core.getJSONPCache(url, {type: 1, handset: textTel.value}, function (data) {
+                    core.result(data, function (data) {
+                        if (data.code == '0') {
+                            alert(data.data);
+                            document.getElementById("textTel").value = '';
+                        }
+                    })
+                })
+
+            };
+        },
+        goodList: function () {
+            var url = g.urlHttp + "JXPM/GetMSYXB";
+            core.getJSONPCache(url, {}, function (data) {
+                core.result(data, function (data) {
+                    var dataBase = data.data.Result, str = '';
+                    for (var i = 0; i < dataBase.length; i++) {
+                        str += '<div class="jiaxiao"><em></em><strong>优选榜</strong><span>' + dataBase[i].JXNAME + '</span></div>';
+                    }
+                    $(".main").append(str);
+                })
+            })
+        },
+        init: function () {
+            var textTel = document.getElementById("textTel");
+            this.checkTel(textTel);
+            this.btnSubmit(textTel);
+            this.goodList();
+        }
+    }
+    check.init();
+});

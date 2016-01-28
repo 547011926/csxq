@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <meta name="x5-orientation" content="portrait"><!--禁止横屏QQ浏览器-->
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"><!--禁止缓存-->
+    <META HTTP-EQUIV="Expires" CONTENT="0"><!--禁止缓存-->
+		<title>地理位置</title>
+		<link rel="stylesheet" type="text/css" href="css/jiaxiao.css"/>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=780201d0d87e3710b503226f51096df0"></script>
+	</head>
+	<body>
+		<div class="wrap map" id="map">
+		</div>
+	</body>
+	
+	<script src="js/zepto.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script data-main="js/app/jxmap" src="js/require.js"></script>
+</html>
